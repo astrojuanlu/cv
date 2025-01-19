@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Juan Luis Cano Rodríguez - Résumé</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-/* General styles */
-
 /* Compact layout */
 body, p, ul, h2, h3, h4 {
     margin: 0;
@@ -22,28 +21,32 @@ body {
     padding: 0;
 }
 
-main, header, footer {
+div.h-resume {
     margin: 0 auto;
     max-width: 900px;
-    padding: 20px 60px;
+    padding: 30px 60px 10px;
     background-color: white;
     border: 1px solid #ddd;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 header {
-    text-align: center;
+    text-align: left;
     margin-bottom: 30px;
 }
 
 h1 {
-    font-size: 2em;
+    font-size: 3em;
+    font-weight: normal;
     color: #222;
     margin-bottom: 0.1em;
 }
 
+body, p, h4 {
+    font-size: 0.9em;
+}
+
 p {
-    font-size: 1.1em;
     color: #555;
 }
 
@@ -62,26 +65,40 @@ a:hover {
     text-decoration: underline;
 }
 
-header.p-contact > * {
-    display: block;  /* Each top-level header element on its own line */
+header.p-contact > span {
+    display: inline-block;
+    margin-right: 1em;
+}
+
+header.p-contact > address {
+    margin-top: 0.6em;
 }
 
 section article.p-experience {
-	margin-bottom: 0.8em;
-	border-top: 1px dashed #ccc;
+    margin: 0.8em 0;
+    border-top: 1px dashed #ccc;
 }
 
-.p-experience h4.p-name {
-    display: inline;
+article.p-experience h4.p-name {
+    display: inline-block;
 }
 
-/* Section and article styling */
+article.p-experience > span.dates {
+    float: right;
+    margin: 0;
+}
+
 section {
     margin-bottom: 40px;
 }
 
 h2 {
+    font-size: 1.6em;
     border-bottom: 2px solid #ccc;
+}
+
+h3 {
+    font-size: 1.2em;
 }
 
 h2, h3 {
@@ -92,10 +109,9 @@ h2, h3 {
 }
 
 h4 {
-    font-size: 1.2em;
+    font-size: 1em;
     color: #333;
-    margin-top: 0.8em;
-    margin-bottom: 0.4em;
+    margin-bottom: 0;
 }
 
 ul {
@@ -123,14 +139,10 @@ ul li.p-skill {
     display: inline-block;
 }
 
-/* Styling for time periods and links */
-time {
+article.p-experience span.dates {
     font-style: italic;
+    font-size: 0.9em;
     color: #777;
-}
-
-article p {
-    margin: 0.2em 0;
 }
 
 footer {
@@ -160,22 +172,26 @@ footer {
         background-color: #fff;
     }
 
-    main, header, footer {
+    div.h-resume {
         border: none;
+    }
+
+    body {
+        font-size: 0.8em;
     }
 }
     </style>
 </head>
-<body class="h-resume">
+<body>
+    <div class="h-resume">
     <header class="p-contact h-card">
         <h1 class="p-name">Juan Luis Cano Rodríguez</h1>
-        <a class="u-email" href="mailto:hello@juanlu.space">hello@juanlu.space</a>
-        <span>GitHub: <a class="u-url" href="https://github.com/astrojuanlu">https://github.com/astrojuanlu</a></span>
-        <span>LinkedIn: <a class="u-url" href="https://github.com/astrojuanlu">https://github.com/astrojuanlu</a></span>
-        <a class="p-tel" href="tel:+34646515050">+34 646 515 050</a>
-        <time class="p-bday" datetime="1991-09-02">September 2, 1991</time>
+        <span><i class="fa-solid fa-at"></i> <a class="u-email" href="mailto:hello@juanlu.space">hello@juanlu.space</a></span>
+        <span><i class="fa-brands fa-github"></i> <a class="u-url" href="https://github.com/astrojuanlu">https://github.com/astrojuanlu</a></span>
+        <span><i class="fa-brands fa-linkedin"></i> <a class="u-url" href="https://www.linkedin.com/in/juanluiscanor/">https://www.linkedin.com/in/juanluiscanor/</a></span>
+        <span><i class="fa-solid fa-phone"></i> <a class="p-tel" href="tel:+34646515050">+34 646 515 050</a></span>
         <address class="p-adr h-adr">
-            <span class="p-locality">Madrid</span>, <span class="p-country-name">Spain</span>
+            <i class="fa-solid fa-location-dot"></i> <span class="p-locality">Madrid</span>, <span class="p-country-name">Spain</span>
         </address>
     </header>
 
@@ -188,7 +204,7 @@ footer {
                 <span class="p-location h-card">
                     at <span class="p-org">QuantumBlack, AI by McKinsey</span>
                 </span>
-                <p><time class="dt-start" datetime="2023-01">January 2023</time> - <time class="dt-end" datetime="present">Present</time></p>
+                <span class="dates"><time class="dt-start" datetime="2023-01">January 2023</time> - <time class="dt-end" datetime="present">Present</time></span>
                 <ul class="p-description">
                     <li><strong>Repository:</strong> <a href="https://github.com/kedro-org">https://github.com/kedro-org</a></li>
                     <li>Define the strategy for the product</li>
@@ -202,7 +218,7 @@ footer {
                 <span class="p-location h-card">
                     at <span class="p-org">Orchest</span>
                 </span>
-                <p><time class="dt-start" datetime="2022-02">February 2022</time> - <time class="dt-end" datetime="2022-12">December 2022</time></p>
+                <span class="dates"><time class="dt-start" datetime="2022-02">February 2022</time> - <time class="dt-end" datetime="2022-12">December 2022</time></span>
                 <ul class="p-description">
                     <li><strong>Repository:</strong> <a href="https://github.com/orchest">https://github.com/orchest</a></li>
                 </ul>
@@ -213,7 +229,7 @@ footer {
                 <span class="p-location h-card">
                     at <span class="p-org">Read the Docs</span>
                 </span>
-                <p>March 2021 - February 2022</p>
+                <span class="dates">March 2021 - February 2022</span>
                 <ul>
                     <li><strong>Repository:</strong> <a href="https://github.com/readthedocs">https://github.com/readthedocs</a></li>
                 </ul>
@@ -224,30 +240,42 @@ footer {
                 <span class="p-location h-card">
                     at <span class="p-org">Satellogic</span>
                 </span>
-                <p>June 2017 - March 2021</p>
+                <span class="dates">June 2017 - March 2021</span>
                 <ul>
                     <li><strong>Repository:</strong> <a href="https://github.com/satellogic">https://github.com/satellogic</a></li>
                 </ul>
             </article>
 
             <article class="p-experience h-event">
-                <h4>Data Scientist at Synergic Partners, a Telefonica Company</h4>
-                <p>September 2016 - June 2017</p>
+                <h4 class="p-name">Data Scientist</h4>
+                <span class="p-location h-card">
+                    at <span class="p-org">Synergic Partners, a Telefonica Company</span>
+                </span>
+                <span class="dates">September 2016 - June 2017</span>
             </article>
 
             <article class="p-experience h-event">
-                <h4>Quant Developer at BBVA (on behalf of Indizen)</h4>
-                <p>March 2016 - September 2016</p>
+                <h4 class="p-name">Quant Developer</h4>
+                <span class="p-location h-card">
+                    at <span class="p-org">BBVA</span> (on behalf of <span class="p-org">Indizen</span>)
+                </span>
+                <span class="dates">March 2016 - September 2016</span>
             </article>
 
             <article class="p-experience h-event">
-                <h4>Flight Dynamics Engineer at GMV</h4>
-                <p>September 2015 - March 2016</p>
+                <h4 class="p-name">Flight Dynamics Engineer</h4>
+                <span class="p-location h-card">
+                    at <span class="p-org">GMV</span>
+                </span>
+                <span class="dates">September 2015 - March 2016</span>
             </article>
 
             <article class="p-experience h-event">
-                <h4>Loads & Aeroelastics Intern at Airbus Operations</h4>
-                <p>July 2014 - July 2015</p>
+                <h4 class="p-name">Intern (Loads & Aeroelastics)</h4>
+                <span class="p-location h-card">
+                    at <span class="p-org">Airbus Operations</span>
+                </span>
+                <span class="dates">July 2014 - July 2015</span>
             </article>
 
             <h3>Teaching</h3>
@@ -256,7 +284,7 @@ footer {
                 <span class="p-location h-card">
                     at <span class="p-org">Instituto Empresa</span>
                 </span>
-                <p>January 2018 - Present</p>
+                <span class="dates">January 2018 - Present</span>
             </article>
 
             <article class="p-experience h-event">
@@ -264,18 +292,18 @@ footer {
                 <span class="p-location h-card">
                     at <span class="p-org">Barcelona Technology School</span>
                 </span>
-                <p>October 2018 - June 2019</p>
+                <span class="dates">October 2018 - June 2019</span>
             </article>
 
             <article class="p-experience h-event">
-                <h4>Freelance Instructor of Scientific Python Courses</h4>
-                <p>2013 - 2016</p>
+                <h4 class="p-name">Freelance Instructor of Scientific Python Courses</h4>
+                <span class="dates">2013 - 2016</span>
             </article>
 
             <h3>Freelance and Contract Work</h3>
             <article class="p-experience h-event">
-                <h4>Freelance Researcher for Libre Space Foundation</h4>
-                <p>2018 - 2021</p>
+                <h4 class="p-name">Freelance Researcher for Libre Space Foundation</h4>
+                <span class="dates">2018 - 2021</span>
             </article>
 
             <article class="p-experience h-event">
@@ -283,20 +311,20 @@ footer {
                 <span class="p-location h-card">
                     at <span class="p-org">NumFOCUS</span>
                 </span>
-                <p>July 2020 - December 2020</p>
+                <span class="dates">July 2020 - December 2020</span>
                 <ul>
                     <li><strong>Repository:</strong> <a href="https://github.com/astropy">https://github.com/astropy</a></li>
                 </ul>
             </article>
 
             <article class="p-experience h-event">
-                <h4>Freelance - Ship Route Optimization Software for Deep Blue Globe</h4>
-                <p>2018 - 2019</p>
+                <h4 class="p-name">Freelance - Ship Route Optimization Software for Deep Blue Globe</h4>
+                <span class="dates">2018 - 2019</span>
             </article>
 
             <article class="p-experience h-event">
-                <h4>Freelance Researcher for EU-H2020 project with Boeing R&T Europe</h4>
-                <p>2017</p>
+                <h4 class="p-name">Freelance Researcher for EU-H2020 project with Boeing R&T Europe</h4>
+                <span class="dates">2017</span>
             </article>
         </section>
 
@@ -305,13 +333,13 @@ footer {
             <article class="p-education h-event">
                 <h4 class="p-name">MSc Aerospace Engineering (Erasmus Scholarship)</h4>
                 <p class="p-org">Politecnico di Milano</p>
-                <p><time class="dt-start" datetime="2012">2012</time> - <time class="dt-end" datetime="2013">2013</time></p>
+                <span class="dates"><time class="dt-start" datetime="2012">2012</time> - <time class="dt-end" datetime="2013">2013</time></span>
             </article>
 
             <article class="p-education h-event">
                 <h4 class="p-name">MSc Aeronautical Engineering</h4>
                 <p class="p-org">TU Madrid</p>
-                <p><time class="dt-start" datetime="2009">2009</time> - <time class="dt-end" datetime="2017">2017</time></p>
+                <span class="dates"><time class="dt-start" datetime="2009">2009</time> - <time class="dt-end" datetime="2017">2017</time></span>
             </article>
         </section>
 
@@ -337,27 +365,27 @@ footer {
             <h2>Volunteering</h2>
             <article class="p-experience h-event">
                 <h4 class="p-name">Author of poliastro</h4>
-                <p><time class="dt-start" datetime="2014">2013</time> - <time class="dt-end" datetime="2020">2022</time></p>
+                <span class="dates"><time class="dt-start" datetime="2014">2013</time> - <time class="dt-end" datetime="2020">2022</time></span>
             </article>
 
             <article class="p-experience h-event">
-                <h4>Chair of Python España</h4>
-                <p>2014 - 2020</p>
+                <h4 class="p-name">Chair of Python España</h4>
+                <span class="dates">2014 - 2020</span>
             </article>
 
             <article class="p-experience h-event">
-                <h4>Co-organizer of PyConES</h4>
-                <p>2013 - 2019</p>
+                <h4 class="p-name">Co-organizer of PyConES</h4>
+                <span class="dates">2013 - 2019</span>
             </article>
 
             <article class="p-experience h-event">
-                <h4>Founding Member of Python España</h4>
-                <p>2012</p>
+                <h4 class="p-name">Founding Member of Python España</h4>
+                <span class="dates">2012</span>
             </article>
 
             <article class="p-experience h-event">
-                <h4>Co-founder and Author at Pybonacci</h4>
-                <p>2012 - 2017</p>
+                <h4 class="p-name">Co-founder and Author at Pybonacci</h4>
+                <span class="dates">2012 - 2017</span>
             </article>
         </section>
 
@@ -418,5 +446,6 @@ footer {
     <footer>
         <p>References available upon request</p>
     </footer>
+    </div>
 </body>
 </html>
