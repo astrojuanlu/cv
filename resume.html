@@ -107,6 +107,22 @@ ul li {
     margin-bottom: 0em;
 }
 
+ul:has(> li.p-skill) {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+ul li.p-skill {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 4px 12px;
+    display: inline-block;
+}
+
 /* Styling for time periods and links */
 time {
     font-style: italic;
@@ -359,6 +375,33 @@ footer {
                 </li>
             </ul>
         </section>
+
+        <section>
+            <h2>Skills</h2>
+            <ul>
+                <li class="p-skill">Software Engineering</li>
+                <li class="p-skill">Python</li>
+                <li class="p-skill">Rust</li>
+                <li class="p-skill">HTML</li>
+                <li class="p-skill">CSS</li>
+                <li class="p-skill">Fortran</li>
+                <li class="p-skill">git</li>
+                <li class="p-skill">Linux</li>
+                <li class="p-skill">Docker</li>
+                <li class="p-skill">GitHub</li>
+                <li class="p-skill">GitLab</li>
+                <li class="p-skill">Data Analytics</li>
+                <li class="p-skill">SQL</li>
+                <li class="p-skill">pandas</li>
+                <li class="p-skill">Polars</li>
+                <li class="p-skill">matplotlib</li>
+                <li class="p-skill">Plotly</li>
+                <li class="p-skill">Machine Learning</li>
+                <li class="p-skill">scikit-learn</li>
+                <li class="p-skill">Public Speaking</li>
+                <li class="p-skill">Developer Relations</li>
+                <li class="p-skill">Free/Open-Source Software Development</li>
+            </ul>
     </main>
 
     <footer>
