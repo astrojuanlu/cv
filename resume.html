@@ -55,6 +55,10 @@ a:hover {
     text-decoration: underline;
 }
 
+header.p-contact a {
+    display: block;  /* Each header link on its own line */
+}
+
 /* Section and article styling */
 section {
     margin-bottom: 40px;
@@ -122,19 +126,19 @@ body, p, ul, h2, h3, h4 {
 }
     </style>
 </head>
-<body>
-    <header class="h-card">
+<body class="h-resume">
+    <header class="p-contact h-card">
         <h1 class="p-name">Juan Luis Cano Rodríguez</h1>
-        <p class="p-job-title">Principal Product Manager at <span class="p-org">QuantumBlack, AI by McKinsey</span></p>
-        <address>
-            <a class="u-email" href="mailto:hello@juanlu.space">hello@juanlu.space</a><br>
-            <a class="p-tel" href="tel:+34646515050">+34 646 515 050</a><br>
-            <span class="p-country-name">Spanish</span><br>
-            <time class="p-bday" datetime="1991-09-02">September 2, 1991</time>
+        <a class="u-email" href="mailto:hello@juanlu.space">hello@juanlu.space</a>
+        <a class="u-url" href="https://woosh.link/juanlu.space">https://woosh.link/juanlu.space</a>
+        <a class="p-tel" href="tel:+34646515050">+34 646 515 050</a>
+        <time class="p-bday" datetime="1991-09-02">September 2, 1991</time>
+        <address class="p-adr h-adr">
+            <span class="p-locality">Madrid</span>, <span class="p-country-name">Spain</span>
         </address>
     </header>
 
-    <main class="h-resume">
+    <main>
         <!-- Professional Experience (Selected Work) -->
         <section>
             <h2>Professional Experience</h2>
@@ -158,7 +162,7 @@ body, p, ul, h2, h3, h4 {
                 </ul>
             </article>
 
-            <article>
+            <article class="p-experience h-event">
                 <h4>Developer Advocate at Read the Docs</h4>
                 <p>March 2021 - February 2022</p>
                 <ul>
@@ -166,7 +170,7 @@ body, p, ul, h2, h3, h4 {
                 </ul>
             </article>
 
-            <article>
+            <article class="p-experience h-event">
                 <h4>Core Developer of Astropy at NumFOCUS</h4>
                 <p>July 2020 - December 2020</p>
                 <ul>
@@ -174,59 +178,56 @@ body, p, ul, h2, h3, h4 {
                 </ul>
             </article>
 
-            <article>
+            <article class="p-experience h-event">
                 <h4>Planning & Execution Engineer at Satellogic</h4>
                 <p>June 2017 - March 2021</p>
                 <ul>
                     <li><strong>Repository:</strong> <a href="https://github.com/satellogic">https://github.com/satellogic</a></li>
                 </ul>
             </article>
-        </section>
 
-        <!-- Professional Experience (Other Work) -->
-        <section>
             <h3>(Other Work)</h3>
-            <article>
+            <article class="p-experience h-event">
                 <h4>Adjunct Professor at Instituto Empresa</h4>
                 <p>January 2018 - Present</p>
             </article>
 
-            <article>
+            <article class="p-experience h-event">
                 <h4>Adjunct Professor at Barcelona Technology School</h4>
                 <p>October 2018 - June 2019</p>
             </article>
 
-            <article>
+            <article class="p-experience h-event">
                 <h4>Freelance - Ship Route Optimization Software for Deep Blue Globe</h4>
                 <p>2018 - 2019</p>
             </article>
 
-            <article>
+            <article class="p-experience h-event">
                 <h4>Freelance Researcher for EU-H2020 project with Boeing R&T Europe</h4>
                 <p>2017</p>
             </article>
 
-            <article>
+            <article class="p-experience h-event">
                 <h4>Data Scientist at Synergic Partners, a Telefonica Company</h4>
                 <p>September 2016 - June 2017</p>
             </article>
 
-            <article>
+            <article class="p-experience h-event">
                 <h4>Quant Developer at BBVA (on behalf of Indizen)</h4>
                 <p>March 2016 - September 2016</p>
             </article>
 
-            <article>
+            <article class="p-experience h-event">
                 <h4>Flight Dynamics Engineer at GMV</h4>
                 <p>September 2015 - March 2016</p>
             </article>
 
-            <article>
+            <article class="p-experience h-event">
                 <h4>Loads & Aeroelastics Intern at Airbus Operations</h4>
                 <p>July 2014 - July 2015</p>
             </article>
 
-            <article>
+            <article class="p-experience h-event">
                 <h4>Freelance Instructor of Scientific Python Courses</h4>
                 <p>2013 - 2016</p>
             </article>
@@ -248,21 +249,21 @@ body, p, ul, h2, h3, h4 {
             </article>
         </section>
 
-        <!-- Publications -->
+        <!-- Conference talks -->
         <section>
-            <h2>Publications</h2>
-            <h3>Talks and Congresses (Selected Work)</h3>
-            <article class="p-publication">
+            <h2>Conference talks</h2>
+            <h3>(Selected Work)</h3>
+            <article class="p-experience h-event">
                 <h4 class="p-name">Talk: "Beyond pandas: The great Python dataframe showdown"</h4>
                 <p>2022 - PyCon Lithuania, PyData London, Python Girona, PyCon Spain</p>
             </article>
 
-            <article>
+            <article class="p-experience h-event">
                 <h4>Talk: "Document Your Scientific Project With Markdown, Sphinx, and Read the Docs"</h4>
                 <p>2021 - PyData Global and PyCon Spain</p>
             </article>
 
-            <article>
+            <article class="p-experience h-event">
                 <h4>Talks about poliastro</h4>
                 <p>2015-2022 - Various conferences including SciPy US, EuroSciPy, PyCon Namibia</p>
             </article>
@@ -276,22 +277,22 @@ body, p, ul, h2, h3, h4 {
                 <p><time class="dt-start" datetime="2014">2013</time> - <time class="dt-end" datetime="2020">2022</time></p>
             </article>
 
-            <article>
+            <article class="p-experience h-event">
                 <h4>Chair of Python España</h4>
                 <p>2014 - 2020</p>
             </article>
 
-            <article>
+            <article class="p-experience h-event">
                 <h4>Co-organizer of PyConES</h4>
                 <p>2013 - 2019</p>
             </article>
 
-            <article>
+            <article class="p-experience h-event">
                 <h4>Founding Member of Python España</h4>
                 <p>2012</p>
             </article>
 
-            <article>
+            <article class="p-experience h-event">
                 <h4>Co-founder and Author at Pybonacci</h4>
                 <p>2012 - 2017</p>
             </article>
