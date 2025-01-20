@@ -145,6 +145,10 @@ article.p-experience span.dates {
     color: #777;
 }
 
+article.p-experience:not(:has(span.p-summary)) h4 {
+    color: #666;
+}
+
 footer {
     text-align: center;
     font-size: 0.9em;
@@ -205,11 +209,13 @@ footer {
                     at <span class="p-org">QuantumBlack, AI by McKinsey</span>
                 </span>
                 <span class="dates"><time class="dt-start" datetime="2023-01">January 2023</time> - <time class="dt-end" datetime="present">Present</time></span>
+                <span class="p-summary"><i class="fa-brands fa-osi"></i> <a href="https://github.com/kedro-org">https://github.com/kedro-org</a></span>
                 <ul class="p-description">
-                    <li><strong>Repository:</strong> <a href="https://github.com/kedro-org">https://github.com/kedro-org</a></li>
-                    <li>Define the strategy for the product</li>
-                    <li>Engage with the internal and external community of users</li>
+                    <li>Define the vision and strategy for Kedro, accounting for viability and value risks</li>
+                    <li>Grew Kedro to a graduate project of LF AI &amp; Data, reaching 10 000 GitHub stars, 6 members of the Technical Steering Committee, and 500 000+ monthly PyPI downloads</li>
+                    <li>Gave conference talks and workshops at more than 15 events, including EuroPython, PyData Global, PyData London, AMLD EPFL</li>
                     <li>Manage a team of 15 people, including software engineers, technical writers, designers, and junior product managers</li>
+                    <li>Conducted regular user interviews to discover pain points, with a focus on Data Science teams at big corporations</li>
                 </ul>
             </article>
 
@@ -219,8 +225,11 @@ footer {
                     at <span class="p-org">Orchest</span>
                 </span>
                 <span class="dates"><time class="dt-start" datetime="2022-02">February 2022</time> - <time class="dt-end" datetime="2022-12">December 2022</time></span>
+                <span class="p-summary"><i class="fa-brands fa-osi"></i> <a href="https://github.com/orchest">https://github.com/orchest</a></span>
                 <ul class="p-description">
-                    <li><strong>Repository:</strong> <a href="https://github.com/orchest">https://github.com/orchest</a></li>
+                    <li>Wrote several technical blog posts reaching tens of thousands of views on Reddit</li>
+                    <li>Be among the first people other than the author to give a conference talk about Polars</li>
+                    <li>Set up and manage internal data architecture on top of Orchest itself, including ELT pipelines and BI dashboards for the CEO and investors</li>
                 </ul>
             </article>
 
@@ -230,8 +239,12 @@ footer {
                     at <span class="p-org">Read the Docs</span>
                 </span>
                 <span class="dates">March 2021 - February 2022</span>
-                <ul>
-                    <li><strong>Repository:</strong> <a href="https://github.com/readthedocs">https://github.com/readthedocs</a></li>
+                <span class="p-summary"><i class="fa-brands fa-osi"></i> <a href="https://github.com/readthedocs">https://github.com/readthedocs</a><!--, <a href="https://github.com/sphinx-doc">https://github.com/sphinx-doc</a--></span>
+                <ul class="p-description">
+                    <li>Wrote the first official Sphinx tutorial with input from the community</li>
+                    <li>Delivered several conference talks and workshops on how to author documentation with Sphinx and MyST, some of which have 15k+ views on YouTube and almost unanimous praise in the comments</li>
+                    <li>Managed marketing initiatives (email newsletter, company blog, social media accounts)</li>
+                    <li>Conducted several user interviews to discover common pain points, with a focus on Scientific Computing and Data Science users</li>
                 </ul>
             </article>
 
@@ -241,8 +254,11 @@ footer {
                     at <span class="p-org">Satellogic</span>
                 </span>
                 <span class="dates">June 2017 - March 2021</span>
+                <span class="p-summary"><i class="fa-brands fa-osi"></i> <a href="https://github.com/satellogic">https://github.com/satellogic</a></span>
                 <ul>
-                    <li><strong>Repository:</strong> <a href="https://github.com/satellogic">https://github.com/satellogic</a></li>
+                    <li>Defined the strategy and open sourced telluric, a Python library for interactive geospatial manipulation</li>
+                    <li>Maintained orbit-predictor, a Python library for satellite pass calculation, adding several new algorithms</li>
+                    <li>Implemented an asynchronous task executor for the fleet, running Python on board</li>
                 </ul>
             </article>
 
@@ -302,18 +318,22 @@ footer {
 
             <h3>Freelance and Contract Work</h3>
             <article class="p-experience h-event">
-                <h4 class="p-name">Freelance Researcher for Libre Space Foundation</h4>
+                <h4 class="p-name">Researcher</h4>
+                <span>
+                    at <span class="p-org">Libre Space Foundation</span>
+                </span>
                 <span class="dates">2018 - 2021</span>
+                <span class="p-summary"><i class="fa-brands fa-osi"></i> <a href="https://gitlab.com/librespacefoundation/">https://gitlab.com/librespacefoundation/</a></span>
             </article>
 
             <article class="p-experience h-event">
-                <h4 class="p-name">Core Developer of Astropy</h4>
+                <h4 class="p-name">Contractor</h4>
                 <span class="p-location h-card">
                     at <span class="p-org">NumFOCUS</span>
                 </span>
                 <span class="dates">July 2020 - December 2020</span>
+                <span class="p-summary"><i class="fa-brands fa-osi"></i> <a href="https://github.com/astropy">https://github.com/astropy</a></span>
                 <ul>
-                    <li><strong>Repository:</strong> <a href="https://github.com/astropy">https://github.com/astropy</a></li>
                 </ul>
             </article>
 
@@ -346,31 +366,51 @@ footer {
         <section>
             <h2>Conference Talks (Selected Work)</h2>
             <article class="p-experience h-event">
+                <h4 class="p-name">Workshop: "From zero to MLOps: An open source stack to fight spaghetti ML"</h4>
+                <p>2024-2025 - EuroPython</p>
+            </article>
+
+            <article class="p-experience h-event">
+                <h4 class="p-name">Talk: "Who needs ChatGPT? Rock solid AI pipelines with Hugging Face and Kedro"</h4>
+                <p>2023-2024 - PyData Global, Data Science Summit, PyData Milano, AMLD</p>
+            </article>
+
+            <article class="p-experience h-event">
                 <h4 class="p-name">Talk: "Beyond pandas: The great Python dataframe showdown"</h4>
                 <p>2022 - PyCon Lithuania, PyData London, Python Girona, PyCon Spain</p>
             </article>
 
             <article class="p-experience h-event">
                 <h4>Talk: "Document Your Scientific Project With Markdown, Sphinx, and Read the Docs"</h4>
-                <p>2021 - PyData Global and PyCon Spain</p>
+                <p>2021 - PyData Global, PyCon Spain</p>
             </article>
 
             <article class="p-experience h-event">
-                <h4>Talks about poliastro</h4>
-                <p>2015-2022 - Various conferences including SciPy US, EuroSciPy, PyCon Namibia</p>
+                <h4>Talk: "Per Python ad astra: interactive Astrodynamics with poliastro"</h4>
+                <p>2015-2022 - SciPy US, EuroSciPy, PiterPy, PyCon Spain, SciPyLAT, EuroPython, PyCon Namibia</p>
             </article>
         </section>
 
         <section>
             <h2>Volunteering</h2>
             <article class="p-experience h-event">
-                <h4 class="p-name">Author of poliastro</h4>
+                <h4 class="p-name">Co-organizer of PyData Madrid monthly meetups</h4>
+                <span class="dates">2022 -</span>
+            </article>
+
+            <article class="p-experience h-event">
+                <h4 class="p-name">Creator and maintainer of poliastro</h4>
                 <span class="dates"><time class="dt-start" datetime="2014">2013</time> - <time class="dt-end" datetime="2020">2022</time></span>
             </article>
 
             <article class="p-experience h-event">
                 <h4 class="p-name">Chair of Python España</h4>
                 <span class="dates">2014 - 2020</span>
+            </article>
+
+            <article class="p-experience h-event">
+                <h4 class="p-name">Co-organizer of Python Madrid monthly meetups</h4>
+                <span class="dates">2015 - 2017</span>
             </article>
 
             <article class="p-experience h-event">
@@ -384,7 +424,7 @@ footer {
             </article>
 
             <article class="p-experience h-event">
-                <h4 class="p-name">Co-founder and Author at Pybonacci</h4>
+                <h4 class="p-name">Co-founder and author at Pybonacci</h4>
                 <span class="dates">2012 - 2017</span>
             </article>
         </section>
@@ -443,9 +483,9 @@ footer {
             </ul>
     </main>
 
-    <footer>
+    <!--footer>
         <p>References available upon request</p>
-    </footer>
+    </footer-->
     </div>
 </body>
 </html>
